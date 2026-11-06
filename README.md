@@ -2,9 +2,13 @@
 
 > A tactile, interactive 3D paper money-gun portfolio that sprays real-world engineering work, machine learning systems, and cloud microservices.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live%20Production-success?style=for-the-badge)
+[![Live Production](https://img.shields.io/badge/Live%20Demo-port20--nu.vercel.app-success?style=for-the-badge&logo=vercel)](https://port20-nu.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-vardhanyerramsetti71beep%2Fport2.0-181717?style=for-the-badge&logo=github)](https://github.com/vardhanyerramsetti71beep/port2.0)
 ![AWS Certified](https://img.shields.io/badge/AWS-Certified%20Cloud%20Practitioner-orange?style=for-the-badge&logo=amazon-aws)
 ![Python Full Stack](https://img.shields.io/badge/Python-Full%20Stack%20%26%20ML-3776AB?style=for-the-badge&logo=python)
+
+🌐 **Live URL**: [https://port20-nu.vercel.app](https://port20-nu.vercel.app)  
+📁 **GitHub Repo**: [https://github.com/vardhanyerramsetti71beep/port2.0](https://github.com/vardhanyerramsetti71beep/port2.0)
 
 ---
 
