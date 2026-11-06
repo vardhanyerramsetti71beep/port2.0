@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vardhan Yerramsetti · The Paper Gun Portfolio</title>
+  
+  <!-- Fontshare (Clash Display, Cabinet Grotesk) & Google Fonts (Instrument Serif) -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=cabinet-grotesk@400,500,700,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff3b3f'/><text x='16' y='22' font-family='sans-serif' font-weight='900' font-size='16' fill='white' text-anchor='middle'>V</text></svg>">
+</head>
+<body>
+  <!-- Canvas/Layer for in-flight fluttering paper slips -->
+  <div id="slipsFlightLayer" class="slips-flight-layer" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <!-- Bubbly Stylized Logo for Vardhan -->
+      <a href="#" class="logo-link" title="Vardhan Yerramsetti">
+        <svg class="bubbly-logo" viewBox="0 0 200 60" width="112" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="44" font-family="'Cabinet Grotesk', sans-serif" font-weight="900" font-size="44" fill="#111111" letter-spacing="-1.5">vardhan<tspan fill="#ff3b3f">.</tspan></text>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="nav-center" aria-label="Portfolio sections">
+      <button type="button" class="nav-cat-btn active" data-category="work">Work</button>
+      <button type="button" class="nav-cat-btn" data-category="about">About</button>
+      <button type="button" class="nav-cat-btn" data-category="process">Process</button>
+      <button type="button" class="nav-cat-btn" data-category="contact">Contact</button>
+    </nav>
+
+    <div class="nav-right">
+      <button type="button" id="soundToggle" class="sound-toggle-btn" title="Toggle Sound (SFX)" aria-label="Toggle Sound">
+        <span class="sound-icon">🔊</span>
+      </button>
+      <a href="mailto:vardhanyerramsetti71@gmail.com" class="keycap-btn keycap-white keycap-nav">
+        <span class="keycap-content">Let's Talk <span class="arrow">↗</span></span>
+        <span class="keycap-legend">@</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Hero Stage -->
+  <main class="hero-stage">
+    <!-- Left Column: Content & Tray -->
+    <div class="hero-left">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">PORTFOLIO · 2026</span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero-heading">
+        Hi, I'm <span class="instrument-serif">Vardhan,</span> a full stack builder with a curious mind.
+      </h1>
+
+      <!-- Subtext -->
+      <p class="hero-subtext">
+        My work comes out of this gun. Pull the trigger and catch a slip.
+      </p>
+
+      <!-- Keycap Button Controls Row -->
+      <div class="hero-actions">
+        <button type="button" id="sprayBtn" class="keycap-btn keycap-black keycap-spray" title="Hold down or press Space to spray">
+          <span class="keycap-content">Spray my work</span>
+          <span class="keycap-legend">⏎</span>
+        </button>
+
+        <button type="button" id="cleanBtn" class="keycap-btn keycap-white keycap-clean" title="Clean up all slips">
+          <span class="keycap-content">Clean up</span>
+          <span class="keycap-legend">↺</span>
+        </button>
+
+        <div class="counter-display" id="counterDisplay">
+          <span id="counterNumber" class="counter-num">0</span> slips sprayed
+        </div>
+      </div>
+
+      <!-- Tray: Slips arrange underneath -->
+      <section class="tray-section" aria-label="Collected Portfolio Slips">
+        <div class="tray-header">
+          <span class="tray-label">WHAT CAME OUT · CLICK A SLIP</span>
+          <span class="tray-count-tag" id="trayCountTag">0 items</span>
+        </div>
+        
+        <div class="tray-surface" id="traySurface">
+          <div class="tray-empty-hint" id="trayEmptyHint">
+            Hold "Spray my work", click the gun, or press <kbd>Space</kbd> to spray slips!
+          </div>
+          <!-- Docked slips are dynamically populated here -->
+          <div class="tray-grid" id="trayGrid"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column: 3D Paper Money Gun Stage -->
+    <div class="hero-right">
+      <div class="gun-stage-container" id="gunStageContainer">
+        <!-- Soft Drop Shadow beneath the gun -->
+        <div class="gun-ambient-shadow"></div>
+
+        <!-- Chunky Angular 3D Paper Money Gun SVG -->
+        <div class="gun-interactive-wrapper" id="gunInteractiveWrapper" title="Click & hold gun to spray!">
+          <svg id="moneyGunSvg" class="money-gun-svg" viewBox="0 0 840 520" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Drop shadow filter -->
+              <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="-6" dy="12" stdDeviation="16" flood-color="#7d050a" flood-opacity="0.32" />
+              </filter>
+              
+              <!-- Gun Body Top Face Gradient (Lighter Red) -->
+              <linearGradient id="gradTopFace" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ff6b70" />
+                <stop offset="50%" stop-color="#ff5a5e" />
+                <stop offset="100%" stop-color="#ff3a40" />
+              </linearGradient>
+
+              <!-- Gun Main Side Face Vertical Gradient -->
+              <linearGradient id="gradSideFace" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ff474c" />
+                <stop offset="25%" stop-color="#ff3b3f" />
+                <stop offset="70%" stop-color="#e0141c" />
+                <stop offset="100%" stop-color="#9e090f" />
+              </linearGradient>
+
+              <!-- Gun Rear/Back Face Gradient (Darker Red) -->
+              <linearGradient id="gradBackFace" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c00d14" />
+                <stop offset="100%" stop-color="#680408" />
+              </linearGradient>
+
+              <!-- Gun Muzzle / Front Face Gradient -->
+              <linearGradient id="gradFrontFace" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff3a40" />
+                <stop offset="100%" stop-color="#a50a10" />
+              </linearGradient>
+
+              <!-- Slanted Grip Front Gradient -->
+              <linearGradient id="gradGripSide" x1="0%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="#ff3a40" />
+                <stop offset="40%" stop-color="#d9121a" />
+                <stop offset="100%" stop-color="#88070d" />
+              </linearGradient>
+
+              <!-- Slanted Grip Back Face Gradient -->
+              <linearGradient id="gradGripBack" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#b00c12" />
+                <stop offset="100%" stop-color="#5a0307" />
+              </linearGradient>
+
+              <!-- Dark Ejection Slot Interior -->
+              <linearGradient id="gradSlotHole" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0a0102" />
+                <stop offset="100%" stop-color="#240205" />
+              </linearGradient>
+
+              <!-- Metallic Rivet Gradient -->
+              <radialGradient id="gradRivet" cx="35%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#ff7b80" />
+                <stop offset="40%" stop-color="#8a060b" />
+                <stop offset="100%" stop-color="#3d0104" />
+              </radialGradient>
+            </defs>
+
+            <!-- Base Ground Shadow under the gun body -->
+            <ellipse cx="460" cy="460" rx="270" ry="28" fill="rgba(24, 4, 6, 0.16)" filter="url(#softGlow)" />
+
+            <!-- Gun Recoil Group: kicks back along barrel axis upon firing -->
+            <g id="gunRecoilGroup" class="gun-recoil-group">
+              
+              <!-- Slanted Grip Handle (Mounted below rear) -->
+              <g id="gunGrip">
+                <!-- Grip Back Depth Face -->
+                <polygon points="505,255 565,420 535,432 475,268" fill="url(#gradGripBack)" />
+                <!-- Grip Bottom Cap -->
+                <polygon points="565,420 535,432 485,415 515,402" fill="#4d0306" />
+                <!-- Grip Main Side Face -->
+                <polygon points="455,260 515,402 485,415 425,270" fill="url(#gradGripSide)" />
+                <!-- Grip Ergonomic Textured Indents -->
+                <line x1="440" y1="300" x2="495" y2="330" stroke="#7a060b" stroke-width="4" stroke-linecap="round" />
+                <line x1="448" y1="330" x2="503" y2="360" stroke="#7a060b" stroke-width="4" stroke-linecap="round" />
+                <line x1="456" y1="360" x2="511" y2="390" stroke="#7a060b" stroke-width="4" stroke-linecap="round" />
+                <!-- Grip Highlight Line -->
+                <line x1="427" y1="272" x2="487" y2="413" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linecap="round" />
+              </g>
+
+              <!-- Trigger Guard Loop -->
+              <path d="M 425,275 C 425,330 350,335 345,290 L 375,280 C 380,312 405,310 405,275 Z" fill="#6d0509" />
+
+              <!-- Trigger (Rotates in when firing) -->
+              <g id="gunTriggerGroup" class="gun-trigger-group">
+                <path d="M 390,270 C 390,295 372,305 365,302 C 362,300 375,285 378,270 Z" fill="#8a060b" stroke="#520306" stroke-width="1.5" />
+              </g>
+
+              <!-- Gun Main Box Body -->
+              <g id="gunBody">
+                <!-- Back Face (Rear angled cap) -->
+                <polygon points="680,105 735,135 695,255 640,225" fill="url(#gradBackFace)" />
+                
+                <!-- Top Face (Lighter Red surface) -->
+                <polygon points="175,175 680,105 640,225 135,295" fill="none" /> <!-- reference -->
+                <polygon points="175,175 680,105 640,150 135,220" fill="url(#gradTopFace)" />
+
+                <!-- Muzzle Front Face (Angled slot end where bills eject) -->
+                <polygon points="135,220 175,175 175,255 135,300" fill="url(#gradFrontFace)" />
+
+                <!-- Main Side Face (Vertical gradient #ff3b3f -> #e0141c -> #a50a10) -->
+                <polygon points="135,220 640,150 640,275 135,345" fill="url(#gradSideFace)" />
+
+                <!-- Thin White Highlight along the top edge of the side face -->
+                <line x1="137" y1="221" x2="638" y2="151" stroke="rgba(255, 255, 255, 0.85)" stroke-width="3" stroke-linecap="round" />
+
+                <!-- Secondary Sub-Highlight line -->
+                <line x1="140" y1="225" x2="635" y2="155" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+
+                <!-- Panel Seam Line 1 -->
+                <line x1="285" y1="200" x2="285" y2="324" stroke="rgba(20, 2, 4, 0.3)" stroke-width="2" />
+                <line x1="286" y1="200" x2="286" y2="324" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1" />
+
+                <!-- Panel Seam Line 2 -->
+                <line x1="490" y1="171" x2="490" y2="295" stroke="rgba(20, 2, 4, 0.3)" stroke-width="2" />
+                <line x1="491" y1="171" x2="491" y2="295" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1" />
+
+                <!-- 4 Dark Rivets with Bevel -->
+                <circle cx="170" cy="240" r="5" fill="url(#gradRivet)" stroke="#2b0204" stroke-width="1" />
+                <circle cx="605" cy="178" r="5" fill="url(#gradRivet)" stroke="#2b0204" stroke-width="1" />
+                <circle cx="170" cy="325" r="5" fill="url(#gradRivet)" stroke="#2b0204" stroke-width="1" />
+                <circle cx="605" cy="255" r="5" fill="url(#gradRivet)" stroke="#2b0204" stroke-width="1" />
+
+                <!-- White "PORTFOLIO" Branding in Cabinet Grotesk 900 -->
+                <g transform="translate(385, 245) rotate(-8)">
+                  <text x="0" y="0" 
+                        font-family="'Cabinet Grotesk', sans-serif" 
+                        font-weight="900" 
+                        font-size="62" 
+                        fill="#ffffff" 
+                        letter-spacing="5" 
+                        text-anchor="middle"
+                        filter="drop-shadow(0 3px 6px rgba(40, 2, 5, 0.4))">PORTFOLIO</text>
+                </g>
+
+                <!-- Front Ejection Slot (Where paper bills physically shoot out) -->
+                <!-- The slot anchor element for physics tracking -->
+                <polygon id="gunSlot" points="144,235 158,220 158,285 144,300" fill="url(#gradSlotHole)" stroke="#3a0205" stroke-width="2" />
+                <line x1="145" y1="236" x2="145" y2="299" stroke="#000000" stroke-width="3" />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Visual Prompt / Hint -->
+        <div class="gun-hint">
+          <span class="hint-pulse"></span>
+          <span>Click & hold gun · Hold button · Press Space</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Frosted Glass Slip Detail Modal / Card -->
+  <aside id="detailCard" class="detail-card hidden" aria-labelledby="detailTitle" role="dialog" aria-modal="false">
+    <div class="detail-card-inner">
+      <div class="detail-header">
+        <div class="detail-badge-group">
+          <span class="detail-dot" id="detailDot"></span>
+          <span class="detail-kicker" id="detailKicker">PROJECT 01</span>
+        </div>
+        <button type="button" id="closeDetailBtn" class="detail-close-btn" aria-label="Close detail card">×</button>
+      </div>
+
+      <h2 class="detail-title" id="detailTitle">Scalable Task & Data Management Cloud Portal</h2>
+      
+      <div class="detail-tech-tags" id="detailTechTags">
+        <!-- Badges dynamically added -->
+      </div>
+
+      <p class="detail-description" id="detailDescription">
+        Detailed explanation of architecture, technical achievements, metrics, and outcomes.
+      </p>
+
+      <div class="detail-actions" id="detailActions">
+        <a href="#" id="detailLiveBtn" class="detail-btn detail-btn-primary" target="_blank" rel="noopener noreferrer">
+          <span>Live App</span> <span class="arrow">↗</span>
+        </a>
+        <a href="#" id="detailRepoBtn" class="detail-btn detail-btn-secondary" target="_blank" rel="noopener noreferrer">
+          <span>GitHub Repo</span> <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
