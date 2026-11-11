@@ -205,6 +205,19 @@
         description: 'Engineered a responsive, mobile-first artisanal food e-commerce platform with dynamic flavor filtering and localized regional UX. Implemented persistent client-side cart state management supporting real-time price calculations, quantity updates, and local storage hydration. Sub-second first contentful paint (FCP).',
         liveUrl: 'https://ms-pickles.vercel.app',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep/MS-pickles'
+      },
+      {
+        id: 'vignesh-traders',
+        category: 'work',
+        type: 'big',
+        word: 'VT CAR CARE',
+        subline: 'PROJECT 07',
+        kicker: 'PROJECT 07 · BUSINESS SITE & SVG MOTION',
+        title: 'Vignesh Traders Car Care & Detailing Studio Website',
+        tech: ['HTML5/CSS3', 'JavaScript (ES6+)', 'Inline SVG', 'Scroll Animation', 'Vercel'],
+        description: 'Designed and built the website for a car care and detailing studio in Vijayawada: 8 services, 3 fixed-price packages and a no-backend booking flow that hands off to WhatsApp. Built a scroll-driven SVG scene, drawn entirely in code, where a dusty car is foam-washed outside and steam-cleaned inside as the page scrolls. Zero dependencies and no build step, with reduced-motion and no-JavaScript fallbacks.',
+        liveUrl: 'https://vignesh-traders.vercel.app',
+        githubUrl: 'https://github.com/vardhanyerramsetti71beep/vignesh-traders'
       }
     ],
     about: [
@@ -225,12 +238,12 @@
         id: 'deployments-metric',
         category: 'about',
         type: 'big',
-        word: '8 DEPLOYS',
+        word: '9 DEPLOYS',
         subline: 'AWS & VERCEL',
         kicker: 'TRACK RECORD · PRODUCTION',
-        title: '8 Verified Production Deployments',
+        title: '9 Verified Production Deployments',
         tech: ['AWS EC2', 'AWS S3', 'AWS RDS', 'Lambda', 'Vercel'],
-        description: 'Backed by 8 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
+        description: 'Backed by 9 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
         liveUrl: 'https://github.com/vardhanyerramsetti71beep',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep'
       },
