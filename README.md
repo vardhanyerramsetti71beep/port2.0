@@ -44,6 +44,7 @@
   5. **S.V.T. Tailors Bespoke Atelier & 5-Stage Tracker** (Python Serverless, MySQL, React.js)
   6. **MS Pickles Artisanal Andhra E-Commerce Platform** (JavaScript ES6+, LocalStorage, Tailwind CSS)
   7. **Vignesh Traders Car Care & Detailing Studio Website** (HTML5/CSS3, JavaScript ES6+, Inline SVG scroll animation)
+  8. **CrunchLab 3D Product Experience** (Three.js, GSAP ScrollTrigger, Lenis, Vite)
 
 ---
 
