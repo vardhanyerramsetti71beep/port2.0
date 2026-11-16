@@ -231,6 +231,19 @@
         description: 'Created a scroll-driven 3D product site with a cinematic chip-storm loader, interactive hero carousel, flavour wall and build-your-own 3-pack experience. Generated all six product-pack visuals in code using canvases and real-time Three.js meshes, eliminating image and model assets. Added motion controls that respect prefers-reduced-motion across scroll, swipe, keyboard and autoplay.',
         liveUrl: 'https://crunchlab-blond.vercel.app',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep/crunchlab'
+      },
+      {
+        id: 'amara-jewellery',
+        category: 'work',
+        type: 'big',
+        word: 'AMARA',
+        subline: 'PROJECT 09',
+        kicker: 'PROJECT 09 · REBRAND & COMPUTER VISION',
+        title: 'AMARA Fine Jewellery Concept Site',
+        tech: ['Python', 'OpenCV', 'GSAP ScrollTrigger', 'Lenis', 'Vercel'],
+        description: "Adapted and rebranded Gireesh Kumar Reddy's CALLA scroll-driven jewellery concept. Wrote a Python + OpenCV pipeline that found the old name stamped on the ring box in all 183 animation frames, painted it out and printed the new one at the same angle and in the same foil colours, and a second one that cut the ring out of its turntable frames to build the hero film. Fixed the original's dead buttons and added a catalogue section with white and rose gold previews.",
+        liveUrl: 'https://amara-jewellery-five.vercel.app',
+        githubUrl: 'https://github.com/vardhanyerramsetti71beep/amara-jewellery'
       }
     ],
     about: [
@@ -251,12 +264,12 @@
         id: 'deployments-metric',
         category: 'about',
         type: 'big',
-        word: '10 DEPLOYS',
+        word: '11 DEPLOYS',
         subline: 'AWS & VERCEL',
         kicker: 'TRACK RECORD · PRODUCTION',
-        title: '10 Verified Production Deployments',
+        title: '11 Verified Production Deployments',
         tech: ['AWS EC2', 'AWS S3', 'AWS RDS', 'Lambda', 'Vercel'],
-        description: 'Backed by 10 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
+        description: 'Backed by 11 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
         liveUrl: 'https://github.com/vardhanyerramsetti71beep',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep'
       },

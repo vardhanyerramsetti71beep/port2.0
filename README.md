@@ -45,6 +45,7 @@
   6. **MS Pickles Artisanal Andhra E-Commerce Platform** (JavaScript ES6+, LocalStorage, Tailwind CSS)
   7. **Vignesh Traders Car Care & Detailing Studio Website** (HTML5/CSS3, JavaScript ES6+, Inline SVG scroll animation)
   8. **CrunchLab 3D Product Experience** (Three.js, GSAP ScrollTrigger, Lenis, Vite)
+  9. **AMARA Fine Jewellery Concept Site**, adapted from Gireesh Kumar Reddy's CALLA concept (Python + OpenCV frame rebranding, GSAP ScrollTrigger, Lenis)
 
 ---
 
