@@ -244,6 +244,19 @@
         description: "Adapted and rebranded Gireesh Kumar Reddy's CALLA scroll-driven jewellery concept. Wrote a Python + OpenCV pipeline that found the old name stamped on the ring box in all 183 animation frames, painted it out and printed the new one at the same angle and in the same foil colours, and a second one that cut the ring out of its turntable frames to build the hero film. Fixed the original's dead buttons and added a catalogue section with white and rose gold previews.",
         liveUrl: 'https://amara-jewellery-five.vercel.app',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep/amara-jewellery'
+      },
+      {
+        id: 'ms-dhoni-tribute',
+        category: 'work',
+        type: 'big',
+        word: 'DHONI',
+        subline: 'PROJECT 10',
+        kicker: 'PROJECT 10 · SPORTS DATA & VIDEO',
+        title: 'MS Dhoni Cricket Career Tribute',
+        tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'SVG', 'Vercel'],
+        description: "A fan site on MS Dhoni's career, current to his IPL retirement in November 2026. Builds captaincy win and loss bars for Tests, ODIs, T20Is and the IPL from data, an interactive chart of 19 IPL seasons that updates a detail panel on tap, and a grid of eight official ICC and Cricbuzz clips, each checked for embedding and loaded only when tapped. His public-domain autograph writes itself across an SVG camera lens. No dependencies and no build step.",
+        liveUrl: 'https://ms-dhoni-tribute.vercel.app',
+        githubUrl: 'https://github.com/vardhanyerramsetti71beep/ms-dhoni-tribute'
       }
     ],
     about: [
@@ -264,12 +277,12 @@
         id: 'deployments-metric',
         category: 'about',
         type: 'big',
-        word: '11 DEPLOYS',
+        word: '12 DEPLOYS',
         subline: 'AWS & VERCEL',
         kicker: 'TRACK RECORD · PRODUCTION',
-        title: '11 Verified Production Deployments',
+        title: '12 Verified Production Deployments',
         tech: ['AWS EC2', 'AWS S3', 'AWS RDS', 'Lambda', 'Vercel'],
-        description: 'Backed by 11 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
+        description: 'Backed by 12 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
         liveUrl: 'https://github.com/vardhanyerramsetti71beep',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep'
       },
