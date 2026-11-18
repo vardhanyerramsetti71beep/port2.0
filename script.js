@@ -257,6 +257,19 @@
         description: "A fan site on MS Dhoni's career, current to his IPL retirement in November 2026. Builds captaincy win and loss bars for Tests, ODIs, T20Is and the IPL from data, an interactive chart of 19 IPL seasons that updates a detail panel on tap, and a grid of eight official ICC and Cricbuzz clips, each checked for embedding and loaded only when tapped. His public-domain autograph writes itself across an SVG camera lens. No dependencies and no build step.",
         liveUrl: 'https://ms-dhoni-tribute.vercel.app',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep/ms-dhoni-tribute'
+      },
+      {
+        id: 'saltline',
+        category: 'work',
+        type: 'big',
+        word: 'SALTLINE',
+        subline: 'PROJECT 11',
+        kicker: 'PROJECT 11 · 3D BROWSER GAME',
+        title: 'SALTLINE Playable Road Game Teaser',
+        tech: ['React', 'TypeScript', 'Three.js', 'Web Audio API', 'Vercel'],
+        description: "Built a playable teaser for an invented road game in React, TypeScript and Three.js. Players drive 580 km through four regions on three lives, choose and respray three cars in a 3D garage, tune a radio whose three stations are synthesized live with the Web Audio API, hunt six secrets and download a driver's card. All artwork is generated in code, so the site ships no image, audio or video files.",
+        liveUrl: 'https://saltline-one.vercel.app',
+        githubUrl: 'https://github.com/vardhanyerramsetti71beep/saltline'
       }
     ],
     about: [
@@ -277,12 +290,12 @@
         id: 'deployments-metric',
         category: 'about',
         type: 'big',
-        word: '12 DEPLOYS',
+        word: '13 DEPLOYS',
         subline: 'AWS & VERCEL',
         kicker: 'TRACK RECORD · PRODUCTION',
-        title: '12 Verified Production Deployments',
+        title: '13 Verified Production Deployments',
         tech: ['AWS EC2', 'AWS S3', 'AWS RDS', 'Lambda', 'Vercel'],
-        description: 'Backed by 12 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
+        description: 'Backed by 13 live production deployments across AWS and Vercel. Proven capability to manage end-to-end release lifecycles from architecture design and database normalization to containerization and cloud orchestration.',
         liveUrl: 'https://github.com/vardhanyerramsetti71beep',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep'
       },

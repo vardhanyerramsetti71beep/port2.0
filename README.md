@@ -47,6 +47,7 @@
   8. **CrunchLab 3D Product Experience** (Three.js, GSAP ScrollTrigger, Lenis, Vite)
   9. **AMARA Fine Jewellery Concept Site**, adapted from Gireesh Kumar Reddy's CALLA concept (Python + OpenCV frame rebranding, GSAP ScrollTrigger, Lenis)
   10. **MS Dhoni Cricket Career Tribute** (HTML5/CSS3, JavaScript ES6+, SVG, data-driven charts, lazy-loaded YouTube embeds)
+  11. **SALTLINE Playable Road Game Teaser** (React, TypeScript, Three.js, Web Audio API, Zustand)
 
 ---
 
