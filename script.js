@@ -267,7 +267,7 @@
         kicker: 'PROJECT 11 · 3D BROWSER GAME',
         title: 'SALTLINE Playable Road Game Teaser',
         tech: ['React', 'TypeScript', 'Three.js', 'Web Audio API', 'Vercel'],
-        description: "Built a playable teaser for an invented road game in React, TypeScript and Three.js. Players drive 580 km through four regions on three lives, choose and respray three cars in a 3D garage, tune a radio whose three stations are synthesized live with the Web Audio API, hunt six secrets and download a driver's card. All artwork is generated in code, so the site ships no image, audio or video files.",
+        description: "Built a playable teaser for an invented road game in React, TypeScript and Three.js. It has four levels on new maps, each ending at a pit stop where the player parks in a marked bay, with three lives per run, traffic and fuel that burns faster on boost. Coins collected on the road buy and upgrade nine cars and trucks, a radio with three stations synthesized live through the Web Audio API plays during the run, and every level hides six secrets. All artwork is generated in code, so the site ships no image, audio or video files.",
         liveUrl: 'https://saltline-one.vercel.app',
         githubUrl: 'https://github.com/vardhanyerramsetti71beep/saltline'
       }
